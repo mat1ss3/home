@@ -1,7 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/joaomar9/public_html/
-    - /bin/cp -r index.html $DEPLOYPATH
-    - /bin/cp -r projetos.html $DEPLOYPATH
-    - /bin/cp -r painel $DEPLOYPATH
+    - export SOURCEPATH=/home/joaomar9/repositories/home
+    - export DEPLOYPATH=/home/joaomar9/public_html
+    - /bin/cp -rf $SOURCEPATH/index.html $DEPLOYPATH/
+    - /bin/cp -rf $SOURCEPATH/projetos.html $DEPLOYPATH/
+    - /bin/cp -rf $SOURCEPATH/painel $DEPLOYPATH/
