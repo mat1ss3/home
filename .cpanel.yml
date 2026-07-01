@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/joaomar9/public_html/
+    - /bin/cp -r index.html $DEPLOYPATH
+    - /bin/cp -r painel $DEPLOYPATH
