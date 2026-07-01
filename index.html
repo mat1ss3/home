@@ -52,10 +52,20 @@
   }
   nav .wrap{display:flex; justify-content:space-between; align-items:center; height:68px;}
   .logo{
-    font-family:var(--mono); font-size:14px; letter-spacing:0.02em; font-weight:500;
-    display:flex; align-items:center; gap:8px;
+    display:flex; align-items:center; gap:10px; text-decoration:none;
   }
-  .logo .bolt{color:var(--accent); font-size:16px;}
+  .logo-mark{
+    width:38px; height:38px; flex-shrink:0;
+    background:var(--ink); color:var(--accent);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:700; font-size:14px;
+    letter-spacing:-0.02em; border-radius:3px;
+    position:relative;
+  }
+  .logo-mark::after{
+    content:''; position:absolute; inset:3px;
+    border:1px solid rgba(255,107,30,0.35); border-radius:2px; pointer-events:none;
+  }
   .navlinks{display:flex; gap:30px; list-style:none; font-family:var(--mono); font-size:13px;}
   .navlinks a{text-decoration:none; color:var(--ink-soft); transition:color .2s;}
   .navlinks a:hover{color:var(--accent);}
@@ -181,7 +191,7 @@
 
 <nav>
   <div class="wrap">
-    <div class="logo"><span class="bolt">⚡</span>ENG·ELÉTRICA</div>
+    <a class="logo" href="index.html"><span class="logo-mark">JMF</span></a>
     <ul class="navlinks">
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#servicos">Serviços</a></li>
