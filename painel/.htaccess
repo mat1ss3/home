@@ -1,0 +1,10 @@
+# Bloqueia o acesso direto a ficheiros de configuração e base de dados
+<FilesMatch "^(config\.php)$">
+    Require all denied
+</FilesMatch>
+<FilesMatch "\.sqlite$">
+    Require all denied
+</FilesMatch>
+
+# Desativa a listagem de diretórios
+Options -Indexes

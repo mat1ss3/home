@@ -1,0 +1,7 @@
+# Impede a execução de PHP e outros scripts dentro desta pasta,
+# mesmo que algum ficheiro perigoso consiga ser enviado.
+<FilesMatch "\.(php|php\d|phtml|phar|pl|py|cgi|sh|asp|aspx)$">
+    Require all denied
+</FilesMatch>
+
+Options -Indexes

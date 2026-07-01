@@ -1,0 +1,10 @@
+# Base de dados local do painel (gerada automaticamente no servidor, nunca deve ir para o Git)
+painel/data/*.sqlite
+painel/data/*.sqlite-journal
+
+# Ficheiros geridos pelo painel (uploads dos utilizadores, não fazem parte do código)
+painel/files/*
+!painel/files/.htaccess
+!painel/files/LEIAME.txt
+
+.DS_Store
